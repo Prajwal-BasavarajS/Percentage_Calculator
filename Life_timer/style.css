@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+
+    font-family:'Oswald', sans-serif                ;
+
+}
+
+
+.background{
+    width: 100%;
+    background-size: cover; 
+    height: 100vh;
+    background-image: url(./images/mountain.jpg);
+}
+
+
+.container{
+    
+    place-items: center;
+    display: grid;
+    height: 100vh;
+}
+
+.container h1{
+    font-size: 3rem;
+}
+
+.settings{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute; /* gets position with respect to its body/ parent tag*/
+    bottom: 30px;
+    right:30px;
+}
+
+
+.settings i{
+    font-size: 2rem;
+}
+
+.setting-content{
+    display:flex;
+    gap: 20px;
+}
+
+
+.setting-content input{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    border: 5px solid;
+
+}
+
+.setting-content button{
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: rgb(156, 226, 156);
+    border-radius: 20px;
+    font-weight: 700;
+    border: 5px solid;
+}
+
+
+.hide{
+    display: none;
+}
