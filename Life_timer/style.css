@@ -72,3 +72,24 @@ html,body{
 .hide{
     display: none;
 }
+
+.time-container{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.time-container  h2{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 60px;
+}
+
+
+.time-container  div{
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+}

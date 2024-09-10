@@ -1,33 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Life Timer</title>
     <!-- <link rel="shortcut icon" href="./images/favicon_io/android-chrome-192x192.png" type="image/x-icon"> -->
     <!-- <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"> -->
     <!-- <link rel="shortcut icon" href="./images/favicon_io/android-chrome-512x512.png" type="image/x-icon"> -->
-    <link rel="shortcut icon" href="./images/favicon_io/apple-touch-icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/820a928db3.js" crossorigin="anonymous"></script>
-
-</head>
-<body>
+    <link
+      rel="shortcut icon"
+      href="./images/favicon_io/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/820a928db3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="background">
-        <div class="container">
-            <h1>Kindly Enter Your Date of Birth</h1>
-        </div>
-
-        <div class="settings">
-            <i id="cog-icon"  class="fa fa-cog"></i>
-            <div id="setting-content" class="setting-content hide">
-                <input type="date" name="" id="dobInput">
-                <button id="dobButton">ADD DOB </button>
+      <div id = "initialText"  class="container">
+        <h1>Kindly Enter Your Date of Birth</h1>
+      </div>
+      <div  id="afterDobButtonText"  class="container">
+        <div class="center">
+            <h1>How Much Life Joureny Covered, Till Now</h1>
+            <div class="time-container">
+                <h2>
+                    <div id="year">0</div>
+                    Year
+                </h2>
+                <h2>
+                    <div id="month">0</div>
+                    Month
+                </h2>
+                <h2>
+                    <div id="day">0</div>
+                    Day
+                </h2>
+                <h2>
+                    <div id="hour">0</div>
+                    Hours
+                </h2>
+                <h2>
+                    <div id="minute">0</div>
+                    Minutes
+                </h2>
+                <h2>
+                    <div id="second">0</div>
+                    Second
+                </h2>
+    
             </div>
         </div>
+        
+       
+      </div>
 
+      </div>
+
+      <div class="settings">
+        <i id="cog-icon" class="fa fa-cog"></i>
+        <div id="setting-content" class="setting-content hide">
+          <input type="date" name="" id="dobInput" />
+          <button id="dobButton">ADD DOB</button>
+        </div>
+      </div>
     </div>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
