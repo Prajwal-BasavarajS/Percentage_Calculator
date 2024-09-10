@@ -22,6 +22,31 @@ const maketwoDigitno =(number)=>{
 }
 
 
+const contentToggler = () =>{
+
+    if(datebirth){
+
+        // localStorage.setItem("year".datebirth.getFullYear());
+        // localStorage.setItem("month".datebirth.getMonth());
+        // localStorage.setItem("day".datebirth.getFullday());
+        // localStorage.setItem("minute".datebirth.getFullminute());
+        // localStorage.setItem("second".datebirth.getFullsecond());
+        
+        initaltext.classList.add("hide");
+        afterDobButton.classList.remove("hide");
+        // updateAge();
+        contentToggler();
+        setInterval(()=>updateAge(),1000);
+    }
+    else{
+        afterDobButton.classList.add("hide");
+        initaltext.classList.remove("hide");
+    }
+};
+    
+
+    
+
 const toggleDobSelector =  ()  => {
 
     if(isDobopen)
@@ -62,11 +87,7 @@ const updateAge = () =>{
 };
 
 
-const setDobHandler = () =>{
-    const dateString =dobInput.value ;
-
-    datebirth = dateString ? new Date(dateString) : null ; 
-
+const localstoragegetter () =>{
     const year = localStorage.getItem("year");
     const month = localStorage.getItem("month");
     const day = localStorage.getItem("day");
@@ -76,35 +97,20 @@ const setDobHandler = () =>{
     if(year && month && day && hour && minute && second){
         datebirth = new Date(year,month-1,day,hour,minute,second);
         }
-        updateAge();
+}
 
+const setDobHandler = () =>{
+    const dateString =dobInput.value ;
 
-
-
+    datebirth = dateString ? new Date(dateString) : null ; 
 
     // console.log(datebirth,"dateof birth");
-    if(datebirth){
-
-        localStorage.setItem("year".datebirth.getFullYear());
-        localStorage.setItem("month".datebirth.getMonth());
-        localStorage.setItem("day".datebirth.getFullday());
-        localStorage.setItem("minute".datebirth.getFullminute());
-        localStorage.setItem("second".datebirth.getFullsecond());
-        
-        initaltext.classList.add("hide");
-        afterDobButton.classList.remove("hide");
-        // updateAge();
-        setInterval(()=>updateAge(),1000);
-    }
-    else{
-        afterDobButton.classList.add("hide");
-        initaltext.classList.remove("hide");
-    }
-};
+  
 
 setDobHandler();
 
-
+localstoragegetter();
+contentToggler();
 
 
 // updateAge();
